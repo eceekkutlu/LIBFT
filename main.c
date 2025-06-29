@@ -1,26 +1,19 @@
 #include <stdio.h>
 #include "libft.h"
 
-char my_func(unsigned int i, char c)
-{
-    if (i % 2 == 0 && c >= 'a' && c <= 'z')
-        return (c - 32);
-    else
-        return (c);
-}
-
 int main()
 {
-    const char s[] = "merhaba";
-    char *result = ft_strmapi(s, my_func);
-
-    if (!result)
-    {
-        printf("Hata: NULL döndü\n");
-        return 1;
+    char *str= "   fatih soymaz dfgdf dfg df dfg dfgfdgdfgfdg";
+    char c = ' ';
+    char **x=ft_split(str, ' ');
+    int i = 0;
+    while(x[i]){
+        printf("%s\n",x[i]);
+        free(x[i]);
+        i++;
     }
-
-    printf("%s\n", result);
-    free(result);
-    return 0;
+    free(x);
+    // " merhaba     ece ben kerem";
+    //"merhaba" "ece" "ben" "kerem";
+    //""merhaba" "ece" "ben" "kerem""
 }

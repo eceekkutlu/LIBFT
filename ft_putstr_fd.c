@@ -6,13 +6,17 @@
 /*   By: zkutlu <zkutlu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 14:22:57 by zkutlu            #+#    #+#             */
-/*   Updated: 2025/06/26 16:20:03 by zkutlu           ###   ########.fr       */
+/*   Updated: 2025/06/29 03:24:37 by zkutlu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	while()
+	while (*s)
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }

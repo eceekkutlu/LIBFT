@@ -6,7 +6,7 @@
 /*   By: zkutlu <zkutlu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 23:52:17 by zkutlu            #+#    #+#             */
-/*   Updated: 2025/06/25 18:13:31 by zkutlu           ###   ########.fr       */
+/*   Updated: 2025/06/29 03:41:45 by zkutlu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)(s + i));
 		i++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)(s + i));
 	return (NULL);
 }

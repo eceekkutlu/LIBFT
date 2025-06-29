@@ -6,7 +6,7 @@
 /*   By: zkutlu <zkutlu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 00:18:22 by zkutlu            #+#    #+#             */
-/*   Updated: 2025/06/25 18:37:10 by zkutlu           ###   ########.fr       */
+/*   Updated: 2025/06/29 03:42:18 by zkutlu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((array + i - 1));
 		i--;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return (array + ft_strlen(array));
 	return (NULL);
 }

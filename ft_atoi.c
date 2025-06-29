@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zkutlu <zkutlu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/25 16:46:52 by zkutlu            #+#    #+#             */
-/*   Updated: 2025/06/28 20:22:24 by zkutlu           ###   ########.fr       */
+/*   Created: 2025/06/29 01:51:22 by zkutlu            #+#    #+#             */
+/*   Updated: 2025/06/29 02:18:44 by zkutlu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strdup(const char *s)
+int	ft_atoi(const char *str)
 {
-	char	*new;
-	int		i;
-	int		size;
+	int	sign;
+	int	result;
 
-	i = 0;
-	size = ft_strlen(s);
-	new = malloc(sizeof(char) * (size + 1));
-	if (!new)
-		return (NULL);
-	while (i < size)
+	sign = 1;
+	result = 0;
+	while (*str == 32 || (*str <= 13 && *str >= 9))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		new[i] = s[i];
-		i++;
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	new[i] = '\0';
-	return (new);
+	while (*str <= '9' && *str >= '0')
+	{
+		result *= 10;
+		result += (*str - 48);
+		str++;
+	}
+	return (result * sign);
 }

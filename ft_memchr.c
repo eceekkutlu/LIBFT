@@ -6,7 +6,7 @@
 /*   By: zkutlu <zkutlu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 06:20:46 by zkutlu            #+#    #+#             */
-/*   Updated: 2025/06/26 14:25:49 by zkutlu           ###   ########.fr       */
+/*   Updated: 2025/06/28 19:39:32 by zkutlu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-

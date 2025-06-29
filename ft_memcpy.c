@@ -6,7 +6,7 @@
 /*   By: zkutlu <zkutlu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 03:59:50 by zkutlu            #+#    #+#             */
-/*   Updated: 2025/06/25 18:34:27 by zkutlu           ###   ########.fr       */
+/*   Updated: 2025/06/29 03:15:17 by zkutlu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	s1 = (char *)src;
 	s2 = (char *)dest;
+	if (!s1 && !s2)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
